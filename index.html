@@ -27,20 +27,15 @@
             transition: background-color 0.5s ease, color 0.5s ease;
         }
 
-        button:hover {
-            background-color: #606060; /* Button color on hover */
-        }
-
-        .copied {
-            background-color: white !important;
-            color: #383838 !important;
-            animation: fade 1s ease-in-out;
+        button.copied {
+            background-color: white;
+            color: #383838;
+            animation: fade 2s ease-in-out forwards;
         }
 
         @keyframes fade {
             0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>

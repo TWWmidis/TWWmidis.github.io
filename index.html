@@ -24,10 +24,16 @@
             border: none;
             cursor: pointer;
             outline: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         button:hover {
             background-color: #606060; /* Button color on hover */
+        }
+
+        .copied {
+            background-color: white !important;
+            color: #383838 !important;
         }
     </style>
 </head>
@@ -38,8 +44,15 @@
     <script>
         function copyToClipboard() {
             var linkToCopy = "https://your-link-here.com"; // Replace with your actual link
+            var copyButton = document.getElementById("copyButton");
+
             navigator.clipboard.writeText(linkToCopy).then(function() {
-                alert("Link copied to clipboard!");
+                copyButton.classList.add("copied");
+                copyButton.innerHTML = "LINK COPIED SUCCESSFULLY!";
+                setTimeout(function() {
+                    copyButton.classList.remove("copied");
+                    copyButton.innerHTML = "Copy Link";
+                }, 5000);
             }).catch(function(err) {
                 console.error('Unable to copy link', err);
             });

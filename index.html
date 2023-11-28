@@ -24,7 +24,7 @@
             border: none;
             cursor: pointer;
             outline: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
 
         button:hover {
@@ -34,6 +34,13 @@
         .copied {
             background-color: white !important;
             color: #383838 !important;
+            animation: fade 1s ease-in-out;
+        }
+
+        @keyframes fade {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
         }
     </style>
 </head>

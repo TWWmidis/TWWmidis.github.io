@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWW Midis</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark mode background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            background-color: #383838; /* Dark mode button color */
+            color: black; /* Original text color */
+            padding: 10px 20px;
+            border-radius: 10px; /* Rounded button */
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #606060; /* Button color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <button id="copyButton" onclick="copyToClipboard()">Copy Link</button>
+
+    <script>
+        function copyToClipboard() {
+            var linkToCopy = "https://your-link-here.com"; // Replace with your actual link
+            navigator.clipboard.writeText(linkToCopy).then(function() {
+                alert("Link copied to clipboard!");
+            }).catch(function(err) {
+                console.error('Unable to copy link', err);
+            });
+        }
+    </script>
+
+</body>
+</html>

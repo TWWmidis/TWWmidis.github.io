@@ -11,20 +11,29 @@
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
-            justify-content: center;
             height: 100vh;
             margin: 0;
+        }
+
+        #leftContainer {
+            display: flex;
+            flex-direction: column; /* Align elements vertically */
+            align-items: flex-start; /* Align elements to the left */
+            margin-left: 10%;
         }
 
         button {
             background-color: #383838; /* Dark mode button color */
             color: black; /* Original text color */
-            padding: 10px 20px;
-            border-radius: 10px; /* Rounded button */
+            padding: 20px 40px; /* Increased button size */
+            border-radius: 20px; /* Rounded button */
             border: none;
             cursor: pointer;
             outline: none;
             transition: background-color 0.5s ease, color 0.5s ease;
+            font-size: 1.5em; /* Increased button font size */
+            margin-bottom: 10px; /* Added margin between buttons */
+            position: relative;
         }
 
         button.copied {
@@ -37,29 +46,59 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+
+        .buttonContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .line {
+            height: 2px;
+            width: 100%;
+            background-color: grey;
+            margin-top: 10px; /* Adjusted margin */
+        }
+
+        #centerLine {
+            height: 100%;
+            width: 2px;
+            background-color: white;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
     </style>
 </head>
 <body>
 
-    <button id="copyButton" onclick="copyToClipboard()">Copy Link</button>
+    <div id="leftContainer">
+        <div class="buttonContainer">
+            <button onclick="window.location.href='https://www.example.com/midi1'">Redirect Link 1</button>
+            <div class="line"></div>
+            <div id="specialText">Special text here</div>
+        </div>
 
-    <script>
-        function copyToClipboard() {
-            var linkToCopy = "https://your-link-here.com"; // Replace with your actual link
-            var copyButton = document.getElementById("copyButton");
+        <div class="buttonContainer">
+            <button onclick="window.location.href='https://www.example.com/midi2'">Redirect Link 2</button>
+            <div class="line"></div>
+            <div id="specialText2">Special text for Redirect 2</div>
+        </div>
 
-            navigator.clipboard.writeText(linkToCopy).then(function() {
-                copyButton.classList.add("copied");
-                copyButton.innerHTML = "LINK COPIED SUCCESSFULLY!";
-                setTimeout(function() {
-                    copyButton.classList.remove("copied");
-                    copyButton.innerHTML = "Copy Link";
-                }, 5000);
-            }).catch(function(err) {
-                console.error('Unable to copy link', err);
-            });
-        }
-    </script>
+        <div class="buttonContainer">
+            <button onclick="window.location.href='https://www.example.com/midi3'">Redirect Link 3</button>
+            <div class="line"></div>
+            <div id="specialText3">Special text for Redirect 3</div>
+        </div>
+
+        <div class="buttonContainer">
+            <button onclick="window.location.href='https://www.example.com/midi4'">Redirect Link 4</button>
+            <div class="line"></div>
+            <div id="specialText4">Special text for Redirect 4</div>
+        </div>
+    </div>
+
+    <div id="centerLine"></div>
 
 </body>
 </html>

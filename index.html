@@ -14,6 +14,7 @@
             justify-content: space-between; /* Create space between elements */
             height: 100vh;
             margin: 0;
+            overflow: hidden; /* Hide overflow to prevent scrolling */
         }
 
         #leftContainer {
@@ -76,33 +77,66 @@
             max-width: 35%; /* Maximum width of the image */
             height: auto; /* Maintain aspect ratio */
         }
+
+        #scrollableContainer {
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 100vh; /* Set the maximum height of the scrollable container */
+            padding-right: 10%; /* Adjusted padding to accommodate scrollbar */
+        }
     </style>
 </head>
 <body>
 
-    <div id="leftContainer">
-        <div class="buttonContainer">
-            <button onclick="window.location.href='https://www.example.com/midi1'">Redirect Link 1</button>
-            <div class="line"></div>
-            <div id="specialText">Special text here</div>
-        </div>
+    <div id="scrollableContainer">
+        <div id="leftContainer">
+            <div class="buttonContainer">
+                <button onclick="window.location.href='https://twwmidis.github.io/midireqs/firstone.html'">Redirect</button>
+                <div class="line"></div>
+                <div id="specialText">Your love is my drug 8BIT Nightcore</div>
+            </div>
 
-        <div class="buttonContainer">
-            <button onclick="window.location.href='https://www.example.com/midi2'">Redirect Link 2</button>
-            <div class="line"></div>
-            <div id="specialText2">Special text for Redirect 2</div>
-        </div>
+            <div class="buttonContainer">
+                <button onclick="window.location.href='https://twwmidis.github.io/midireqs/secondone.html'">Redirect</button>
+                <div class="line"></div>
+                <div id="specialText2">The red means I love you</div>
+            </div>
 
-        <div class="buttonContainer">
-            <button onclick="window.location.href='https://www.example.com/midi3'">Redirect Link 3</button>
-            <div class="line"></div>
-            <div id="specialText3">Special text for Redirect 3</div>
-        </div>
+            <div class="buttonContainer">
+                <button onclick="window.location.href='https://twwmidis.github.io/midireqs/thirdone.html'">Redirect</button>
+                <div class="line"></div>
+                <div id="specialText3">Sonic unlseashed perfect dark Gaia</div>
+            </div>
 
-        <div class="buttonContainer">
-            <button onclick="window.location.href='https://www.example.com/midi4'">Redirect Link 4</button>
-            <div class="line"></div>
-            <div id="specialText4">Special text for Redirect 4</div>
+            <div class="buttonContainer">
+                <button onclick="window.location.href='https://twwmidis.github.io/midireqs/fourthone.html'">Redirect</button>
+                <div class="line"></div>
+                <div id="specialText4">The Owl House Opening</div>
+            </div>
+
+            <!-- Additional buttons -->
+            <div class="buttonContainer">
+                <button onclick="window.location.href='https://twwmidis.github.io/midireqs/fifthone.html'">Redirect</button>
+                <div class="line"></div>
+                <div id="specialText5">Special text for Redirect 5</div>
+            </div>
+
+            <div class="buttonContainer">
+                <button onclick="window.location.href='https://twwmidis.github.io/midireqs/sixthone.html'">Redirect</button>
+                <div class="line"></div>
+                <div id="specialText6">Angry Birds theme</div>
+            </div>
+
+            <div class="buttonContainer">
+                <button onclick="window.location.href='https://twwmidis.github.io/midireqs/seventhone.html'">Redirect</button>
+                <div class="line"></div>
+                <div id="specialText7">FNF doki highschool conflict</div>
+            </div>
+
+            <div class="buttonContainer">
+                <button onclick="window.location.href='https://twwmidis.github.io/midireqs/eighthone.html'">Redirect</button>
+                <div class="line"></div>
+                <div id="specialText8">Amphibia theme song</div>
+            </div>
         </div>
     </div>
 

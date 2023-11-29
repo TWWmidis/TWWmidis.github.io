@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midi Template</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark mode background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #383838; /* Dark mode button color */
+            color: black; /* Original text color */
+            padding: 15px 30px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            font-size: 1.2em;
+        }
+
+        button.copied {
+            background-color: white;
+            color: #383838;
+            animation: fade 2s ease-in-out forwards;
+        }
+
+        @keyframes fade {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Angry Birds theme</h1>
+
+    <button onclick="copyLink()">Copy Link</button>
+
+    <script>
+        function copyLink() {
+            const linkToCopy = "https://github.com/TWWmidis/twwmidis.github.io/raw/main/files/angrybirds_theme_v2.mid";
+            navigator.clipboard.writeText(linkToCopy).then(function() {
+                document.querySelector('button').classList.add('copied');
+                setTimeout(function() {
+                    document.querySelector('button').classList.remove('copied');
+                }, 5000);
+            }).catch(function(err) {
+                console.error('Unable to copy link', err);
+            });
+        }
+    </script>
+
+</body>
+</html>

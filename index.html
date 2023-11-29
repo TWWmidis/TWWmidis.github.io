@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
+            justify-content: space-between; /* Create space between elements */
             height: 100vh;
             margin: 0;
         }
@@ -18,7 +19,7 @@
         #leftContainer {
             display: flex;
             flex-direction: column; /* Align elements vertically */
-            align-items: flex-start; /* Align elements to the left */
+            align-items: center; /* Center elements horizontally */
             margin-left: 10%;
         }
 
@@ -50,7 +51,7 @@
         .buttonContainer {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center; /* Center elements horizontally */
             margin-bottom: 20px;
         }
 
@@ -67,6 +68,13 @@
             background-color: white;
             margin-left: 5%;
             margin-right: 5%;
+        }
+
+        #rightImage {
+            margin-top: 10px; /* Adjusted margin from the top */
+            margin-right: 10%; /* Margin from the right */
+            max-width: 35%; /* Maximum width of the image */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
@@ -99,6 +107,9 @@
     </div>
 
     <div id="centerLine"></div>
+
+    <!-- Replace the URL with the actual URL of your image -->
+    <img id="rightImage" src="https://via.placeholder.com/800x560" alt="Right Image">
 
 </body>
 </html>
